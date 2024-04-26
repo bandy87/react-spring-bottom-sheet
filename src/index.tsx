@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-pascal-case */
-import Portal from '@reach/portal'
 import React, { forwardRef, useRef, useState, useCallback } from 'react'
+import { createPortal } from 'react-dom'
 import { BottomSheet as _BottomSheet } from './BottomSheet'
 import type { Props, RefHandles, SpringEvent } from './types'
 import { useLayoutEffect } from './hooks'
@@ -73,16 +73,15 @@ export const BottomSheet = forwardRef<RefHandles, Props>(function BottomSheet(
     return null
   }
 
-  return (
-    <Portal data-rsbs-portal>
-      <_BottomSheet
-        {...props}
-        lastSnapRef={lastSnapRef}
-        ref={ref}
-        initialState={initialStateRef.current}
-        onSpringStart={handleSpringStart}
-        onSpringEnd={handleSpringEnd}
-      />
-    </Portal>
+  return createPortal(
+    <_BottomSheet
+      {...props}
+      lastSnapRef={lastSnapRef}
+      ref={ref}
+      initialState={initialStateRef.current}
+      onSpringStart={handleSpringStart}
+      onSpringEnd={handleSpringEnd}
+    />,
+    props.container ?? document.body
   )
 })

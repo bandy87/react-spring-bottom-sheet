@@ -1,5 +1,5 @@
 {
-  "name": "react-spring-bottom-sheet",
+  "name": "@PRNDcompany/react-spring-bottom-sheet",
   "description": "✨ Accessible, 🪄 Delightful, and 🤯 Performant. Built on react-spring for the web, and react-use-gesture.",
   "license": "MIT",
   "author": "Cody Olsen",
@@ -8,7 +8,7 @@
   "bugs": {
     "url": "https://github.com/stipsan/react-spring-bottom-sheet/issues"
   },
-  "version": "3.4.1",
+  "version": "3.4.1-beta.prnd.2",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "files": [
@@ -34,7 +34,6 @@
   "types": "dist/index.d.ts",
   "dependencies": {
     "@juggle/resize-observer": "^3.2.0",
-    "@reach/portal": "^0.13.0",
     "@xstate/react": "^1.2.0",
     "body-scroll-lock": "^3.1.5",
     "focus-trap": "^6.2.2",
@@ -70,7 +69,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.3",
-    "microbundle": "^0.14.0",
+    "microbundle": "0.14.0",
     "next": "^10.0.3",
     "postcss": "^8.1.14",
     "postcss-cli": "^8.3.0",

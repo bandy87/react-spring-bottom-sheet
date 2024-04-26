@@ -44,6 +44,11 @@ export type SpringEvent =
 
 export type Props = {
   /**
+   * The container is used to render the bottom sheet in a different part of the DOM, useful for modals and other overlays.
+   * If you're using a container, make sure you have a portal element in your HTML.
+   */
+  container?: Element
+  /**
    * Ensure that whatever you put in here have at least 1px height, or else the bottom sheet won't open
    */
   children: React.ReactNode
@@ -143,13 +148,13 @@ export type Props = {
   /**
    * Open immediatly instead of initially animating from a closed => open state, useful if the bottom sheet is visible by default and the animation would be distracting
    */
-  skipInitialTransition?: boolean,
+  skipInitialTransition?: boolean
 
   /**
    * Expand the bottom sheet on the content dragging. By default user can expand the bottom sheet only by dragging the header or overlay. This option enables expanding on dragging the content.
    * @default expandOnContentDrag === false
    */
-  expandOnContentDrag?: boolean,
+  expandOnContentDrag?: boolean
 } & Omit<React.PropsWithoutRef<JSX.IntrinsicElements['div']>, 'children'>
 
 export interface RefHandles {
