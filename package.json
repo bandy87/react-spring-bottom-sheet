@@ -1,14 +1,14 @@
 {
-  "name": "@PRNDcompany/react-spring-bottom-sheet",
+  "name": "@bandy87/react-spring-bottom-sheet",
   "description": "✨ Accessible, 🪄 Delightful, and 🤯 Performant. Built on react-spring for the web, and react-use-gesture.",
   "license": "MIT",
-  "author": "Cody Olsen",
+  "author": "Bandy, Cody Olsen",
   "homepage": "https://react-spring-bottom-sheet.cocody.dev",
-  "repository": "stipsan/react-spring-bottom-sheet",
+  "repository": "bandy87/react-spring-bottom-sheet",
   "bugs": {
-    "url": "https://github.com/stipsan/react-spring-bottom-sheet/issues"
+    "url": "https://github.com/bandy87/react-spring-bottom-sheet/issues"
   },
-  "version": "3.4.1-beta.prnd.2",
+  "version": "3.4.1-beta.pbdesign.2",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "files": [
@@ -26,7 +26,8 @@
     "lint": "eslint . --ext ts,tsx,js,jsx --max-warnings 0 && tsc",
     "prepublishOnly": "npm run build:dist",
     "start": "next start",
-    "test": "npm run prepublishOnly && npm run build"
+    "test": "npm run prepublishOnly && npm run build",
+    "prepack": "npm run build:dist"
   },
   "sideEffects": [
     "*.css"
